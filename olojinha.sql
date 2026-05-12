@@ -71,7 +71,7 @@ insert into categorias (catnome) values
 ('Mais Categorias');
 
 
-select 
+"select 
     proid,
     pronome,
     prodescricao,
@@ -87,7 +87,40 @@ from
     produtos,
     subcategorias,
     categorias
+    fotosproduto
 where
     prosubid = subid
 and
     subcatid = catid
+and
+   fotproid = proid
+and
+   fotprincipal = 1";
+
+
+
+
+INSERT INTO `subcategorias`( `subnome`, `subcatid`) 
+VALUES 
+('Playstation',1),
+('XBox',2);
+
+INSERT INTO `produtos`( `pronome`, `prodescricao`, `provalorcusto`, `provalorvenda`, `proquantidade`, `prosubid`) 
+VALUES
+('Hogwarts Legacy - Playstation 5',' Jogo para PlayStation PS4 / PS5: Produto pronto para uso','100','140','20','1'),
+('Assassins Creed Black Flag Resynced Xbox Series X Midia Fisica','Inspire medo nos seus inimigos ao abordar e afundar embarcações rivais na pele de Edward Kenway, capitão do Gralha.','200','264','20','2'),
+('God of War Ragnarok - Playstation 5',' Embarque na jornada épica de Kratos e Atreus pelos reinos nórdicos em uma aventura cheia de ação e mitologia.','180','249','20','1'),
+('Red Dead Redemption 2 Xbox Series X Midia Fisica','Viva a história de Arthur Morgan no velho oeste em um dos jogos mais premiados da história dos videogames.','220','299','20','2'),
+('EA Sports FC 25 - Playstation 5',' Monte seu time dos sonhos e dispute partidas realistas com gráficos de última geração e modos online atualizados.','250','329','20','1'),
+('The Last of Us Part II Remastered PS5',' Sobreviva em um mundo pós-apocalíptico com gráficos aprimorados e jogabilidade intensa no PS5.','190','259','20','1'),
+('Forza Horizon 5 Xbox Series X Midia Fisica',' Explore paisagens incríveis do México em corridas eletrizantes com centenas de carros disponíveis.','210','289','20','2'),
+('Spider-Man Miles Morales - Playstation 5',' Balance por Nova York e enfrente novos inimigos com os poderes únicos de Miles Morales.','170','239','20','1'),
+('Halo Infinite Xbox Series X Midia Fisica',' O lendário Master Chief retorna em uma campanha épica e multiplayer competitivo cheio de ação.','180','249','20','2'),
+('Call of Duty Modern Warfare III PS5',' Entre em batalhas intensas com gráficos ultrarrealistas e modos multiplayer frenéticos.','260','349','20','1'),
+('Resident Evil 4 Remake Xbox Series X Midia Fisica',' Reviva o clássico do terror em uma versão totalmente refeita com gráficos modernos e gameplay renovado.','230','309','20','2'),
+('Gran Turismo 7 - Playstation 5','Experimente o simulador de corrida definitivo com carros realistas e pistas impressionantes.','240','319','20','1');
+
+insert into fotosprodutos
+        (fotcaminho,fotdescricao,fotproid)
+values
+    ('','',1),
