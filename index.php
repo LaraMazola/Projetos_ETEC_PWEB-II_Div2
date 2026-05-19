@@ -22,15 +22,21 @@ select
     subnome,
     subcatid,
     catnome,
-    proativo
+    proativo,
+    fotcaminho
 from
     produtos,
     subcategorias,
-    categorias
+    categorias,
+    fotosproduto
 where
     prosubid = subid
 and
     subcatid = catid
+and
+   fotproid = proid
+and
+  fotprincipal = 1
 ";
 $prppro = $pdo->prepare($sqlpro);
 $prppro->execute();
@@ -139,7 +145,7 @@ $prppro->execute();
       <?php while($dspro = $prppro->fetch(PDO::FETCH_ASSOC)){ ?>
       <div class="col mt-2">
         <div class="card" style="width: 18rem;">
-          <img src="<?php echo $imagem; ?>" class="card-img-top" alt="...">
+          <img src="<?php echo $dspro ['fotcaminho']; ?>" class="card-img-top img-fluid" alt="...">
           <div class="card-body">
             <h5 class="card-title"><?php echo mb_strimwidth($dspro ['pronome'],0,60,"..."); ?></h5>
             <p class="card-text"><?php echo mb_strimwidth($dspro ['prodescricao'],0,130,"..."); ?></p>
@@ -149,7 +155,7 @@ $prppro->execute();
           </div>
         </div>
       </div>
-      <?php  }//$i=$i+1?>
+      <?php  }?>
     </div>
   </main>
 
