@@ -106,7 +106,16 @@ VALUES
     ('imgprodutos/img1.jpg', '', 1),
     ('imgprodutos/img2.jpg', '', 1),
     ('imgprodutos/img3.webp', '', 1),
-    ('imgprodutos/img4.webp', '', 1),
+    ('imgprodutos/img4.png', '', 1),
     ('imgprodutos/img5.jpg', '', 1),
-    ('imgprodutos/img6.jpg', '', 1);
+    ('imgprodutos/img6.png', '', 1);
+
+/* lista de fotos no proid 
+                     1
+                     3
+                     5
+                     6
+                     8
+                     10*/
+
 
