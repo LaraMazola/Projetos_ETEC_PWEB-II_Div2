@@ -104,14 +104,14 @@ VALUES
 INSERT INTO fotosproduto
     (fotcaminho, fotdescricao, fotproid)
 VALUES
-    ('imgprodutos/img1.jpg', '', 1),
+    ('imgprodutos/img1.png', '', 1),
     ('imgprodutos/img2.jpg', '', 1),
     ('imgprodutos/img3.webp', '', 1),
     ('imgprodutos/img4.png', '', 1),
-    ('imgprodutos/img5.jpg', '', 1),
+    ('imgprodutos/img5.png', '', 1),
     ('imgprodutos/img6.png', '', 1),
-    ('imgprodutos/img7.jpg', '', 1),
-    ('imgprodutos/img8.webp', '', 1);
+    ('imgprodutos/img7.png', '', 1),
+    ('imgprodutos/img8.png', '', 1);
 
 
 
@@ -121,6 +121,8 @@ VALUES
                      5
                      6
                      8
-                     10*/
+                     10
+                     13
+                     4*/
 
 
