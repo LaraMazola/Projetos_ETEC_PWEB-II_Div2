@@ -51,9 +51,12 @@ $$prppro ->execute();
                  <input type="text" name="edtsubcategoria" id="edtsubcategoria" class="form-control" readonly>
                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#frmsubcategoria">Buscar</button>
              </div>
+ 
+        </form>
+        
+            <!-- Modal -->
 
-             <!-- Modal -->
-             <div class="modal fade" id="frmsubcategoria" tabindex="-1" aria-labelledby="frmsubcategoriaLabel" aria-hidden="true">
+        <div class="modal fade" id="frmsubcategoria" tabindex="-1" aria-labelledby="frmsubcategoriaLabel" aria-hidden="true">
                  <div class="modal-dialog">
                      <div class="modal-content">
                          <div class="modal-header">
@@ -81,20 +84,27 @@ $$prppro ->execute();
                                                 echo $dssubcategoria ['subnome'];
                                                 ?>
                                               </td>
+                                              <td>
+                                                  <button
+                                                  onclick="pegaSubcategoria(<?php echo $dssubcategoria ['subid'];?>,
+                                                  <?php echo $dssubcategoria ['subnome'];?> )" class="
+                                                  btn btn-outline-info">Selecionar</button>
+                                              </td>
                                           </tr>
                                     <?php } ?>
                                </tbody>
                                 </table>  
                          </div>
                          <div class="modal-footer">
-                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Selecionar</button>
+                             <button type="button" class="btn btn-secondary" 
+                             data-bs-dismiss="modal">Selecionar</button>
                          </div>
                      </div>
                 </div>
             </div>
-        </form>
     </div>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
